@@ -28,7 +28,7 @@
                 templateUrl: 'app/partials/base.html'
             });
 
-            $urlRouterProvider.otherwise('/breweries');
+            $urlRouterProvider.otherwise('/breweries/list');
 
             RestangularProvider.setDefaultRequestParams({key: api_key});
             RestangularProvider.setBaseUrl('http://api.brewerydb.com/v2');
