@@ -68,7 +68,7 @@
             
             $scope.$watch(() => this.gridOptions.filters, (newVal, oldVal) => {
                 this.loading = true;
-                this.gridOptions.filtersAreActive = newVal && newVal.abv;
+                this.gridOptions.filtersAreActive = false;
 
                 if (angular.isDefined(newVal)) {
                     let options = {};
@@ -83,6 +83,7 @@
                     }
 
                     if (options) {
+                        this.gridOptions.filtersAreActive = true;
                         BeerService.search(options).then((results) => {
                             this.paginationOptions.recordCount = results.meta.totalResults;
                             this.gridOptions.data = _.map(results, r => {
