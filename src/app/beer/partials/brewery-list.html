@@ -1,0 +1,8 @@
+<bb-tile bb-tile-header="'Breweries by State'">
+    <bb-grid bb-grid-options="ctrl.gridOptions" bb-grid-pagination="ctrl.paginationOptions" bb-wait="ctrl.loading">
+        <div class="bb-filters-inline">
+            <select ng-model="ctrl.gridOptions.filters.selectedState" ng-options="state as state.name for state in ctrl.states track by state.abbreviation">
+            </select>
+        </div>
+    </bb-grid>
+</bb-tile>

@@ -1,0 +1,8 @@
+src/config.json
+src/dist.js
+src/templates.js
+src/config.js
+src/bower_components
+node_modules
+.idea
+proxy

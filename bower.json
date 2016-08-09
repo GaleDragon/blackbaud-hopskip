@@ -1,0 +1,29 @@
+{
+  "name": "hopskip",
+  "authors": [
+    "Jeremy Morgan <galedragon1223@gmail.com>"
+  ],
+  "description": "beer lookup application",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^0.3.1",
+    "angular": "^1.5.8",
+    "restangular": "^1.5.2",
+    "blackbaud-skyux": "^1.6.9",
+    "ui-bootstrap": "^2.0.1",
+    "ngGeolocation": "~0.0.8",
+    "angular-google-maps": "~2.3.3",
+    "angular-simple-logger": "~0.1.7"
+  }
+}

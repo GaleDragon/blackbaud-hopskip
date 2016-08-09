@@ -1,0 +1,73 @@
+<bb-page bb-page-status="ctrl.pageStatus">
+    <style scoped>
+        .angular-google-map-container { height: 400px; }
+    </style>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <bb-page-summary>
+                    <bb-page-summary-image>
+                        <bb-avatar
+                                bb-avatar-name="ctrl.brewery.name"
+                                bb-avatar-src="ctrl.brewery.images.squareLarge">
+                        </bb-avatar>
+                    </bb-page-summary-image>
+                    <bb-page-summary-title>
+                        {{ ctrl.brewery.name }}
+                    </bb-page-summary-title>
+                    <bb-page-summary-subtitle>
+                        <a ng-href="{{ ctrl.brewery.website }}">{{ ctrl.brewery.website }}</a>
+                    </bb-page-summary-subtitle>
+                    <bb-page-summary-status>
+                        <div class="bb-label-list">
+                            <span class="label" ng-class="label.cls"
+                                  ng-repeat="label in ctrl.brewery.labels">{{ label.text }}</span>
+                        </div>
+                    </bb-page-summary-status>
+                    <bb-page-summary-content ng-if="!!ctrl.brewery.description">
+                        <span class="bb-text-block">
+                            {{ ctrl.brewery.description }}
+                        </span>
+                    </bb-page-summary-content>
+                    <bb-page-summary-key-info>
+                        <div class="bb-key-info-item">{{ ctrl.brewery.locations.primary.locationTypeDisplay }}</div>
+                        <div class="bb-key-info-item">{{ ctrl.brewery.locations.primary.phone }}</div>
+                    </bb-page-summary-key-info>
+                </bb-page-summary>
+            </div>
+
+            <div class="row">
+                <bb-carousel>
+                    <bb-carousel-item ng-repeat="beer in ctrl.beers">
+                        <bb-card bb-card-size="large">
+                            <bb-card-title>{{ beer.name }}</bb-card-title>
+                            <bb-card-content>
+                                <div bb-text-expand="beer.description" bb-text-expand-modal-title="beer.name" style="white-space: pre-wrap"></div>
+                            </bb-card-content>
+                            <bb-card-actions>
+                                <button type="button" class="btn btn-default">Learn More</button>
+                            </bb-card-actions>
+                        </bb-card>
+                    </bb-carousel-item>
+                </bb-carousel>
+            </div>
+
+            <div class="row">
+                <ui-gmap-google-map center='ctrl.map.center' zoom='ctrl.map.zoom'>
+                    <ui-gmap-markers models="ctrl.locations" coords="'self'"></ui-gmap-markers>
+                </ui-gmap-google-map>
+            </div>
+
+            <div class="row" style="height: 200px">
+
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</bb-page>

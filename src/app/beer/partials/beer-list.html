@@ -1,0 +1,14 @@
+<bb-tile bb-tile-header="'Beers'" style="padding: 1em">
+    <bb-grid bb-grid-options="ctrl.gridOptions">
+        <div class="bb-filters-inline">
+            <select ng-model="ctrl.gridOptions.filters.availability" ng-options="a as a.name for a in ctrl.availabilityOptions track by a.id">
+            </select>
+
+            <select ng-model="ctrl.gridOptions.filters.style" ng-options="a as a.name for a in ctrl.beerStyles track by a.id">
+            </select>
+
+            <select ng-model="ctrl.gridOptions.filters.srm" ng-options="a as a.name for a in ctrl.srmOptions track by a.name">
+            </select>
+        </div>
+    </bb-grid>
+</bb-tile>

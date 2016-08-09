@@ -1,0 +1,31 @@
+<bb-action-bar>
+    <div class="row">
+        <div class="col-xs-8 col-md-10">
+            <bb-action-bar-item-group bb-action-bar-item-group-title="actionCtrl.collapsedText">
+                <span>HopSkip</span>
+                <bb-action-bar-item ui-sref="hopskip.brewery.list">
+                    Home
+                </bb-action-bar-item>
+            </bb-action-bar-item-group>
+        </div>
+    </div>
+</bb-action-bar>
+<bb-navbar>
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-left">
+            <li class="bb-navbar" ui-sref-active="{'bb-navbar-active': 'hopskip.brewery'}">
+                <a ui-sref="hopskip.brewery.list">Breweries</a>
+            </li>
+            <li class="bb-navbar" ui-sref-active="{'bb-navbar-active': 'hopskip.beers'}">
+                <a ui-sref="hopskip.beers.list">Beers</a>
+            </li>
+
+
+        </ul>
+    </div>
+</bb-navbar>
+<div class="content">
+    <div class="container">
+        <ui-view></ui-view>
+    </div>
+</div>
